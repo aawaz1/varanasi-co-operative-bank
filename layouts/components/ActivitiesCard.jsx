@@ -38,11 +38,13 @@ export function ActivitiesCard() {
         perspective: "1000px",  // Create a 3D effect for the card flip
       }}
     >
-      <div className="w-full px-0 lg:px-4 py-4  justify-center items-center gap-4 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 container mx-0 md:mx-auto">
+      <div className="w-full px-0 lg:px-0 py-2  justify-center items-center gap-4 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 container mx-0 md:mx-auto">
         <Calculator />
-        
         <ActiveCard />
+        
+       
         <Whatnew />
+       
       </div>
     </motion.div>
   );

@@ -210,7 +210,7 @@ export default function Navbar() {
   function openSideMenu() {
     setSideMenue(true);
   }
-  function closeSideMenu() {
+  const  closeSideMenu = ()  => {
     setSideMenue(false);
   }
 
@@ -284,14 +284,14 @@ export default function Navbar() {
   );
 }
 
-function MobileNav( closeSideMenu) {
+function MobileNav( {closeSideMenu}) {
   return (
     <div className="fixed z-50 left-0 top-0 flex h-full w-full justify-end xl:hidden">
       <div className="h-full w-[65%]  bg-primary  px-4 py-4">
         <section className="flex justify-end">
           <AiOutlineClose
             onClick={closeSideMenu}
-            className="cursor-pointer text-4xl text-white"
+            className="cursor-pointer text-4xl text-black"
           />
         </section>
         <div className="flex flex-col gap-2 text-base text-white transition-all">
@@ -339,7 +339,7 @@ function SingleNavItem(d) {
 
       {/* dropdown */}
       {isItemOpen && d.children && (
-        <div className="  w-auto  flex-col gap-1   rounded-lg bg-white py-3   transition-all flex ">
+        <div className="  w-full  flex-col gap-1   rounded-lg bg-white py-3   transition-all flex ">
           {d.children.map((ch, i) => (
             <Link
               key={i}
@@ -347,9 +347,9 @@ function SingleNavItem(d) {
               className=" flex cursor-pointer items-center  py-1 pl-6 pr-8  text-black  "
             >
               {/* image */}
-              {ch.iconImage && <Image src={ch.iconImage} alt="item-icon" />}
+              {/* {ch.iconImage && <Image src={ch.iconImage} alt="item-icon" />} */}
               {/* item */}
-              <span className="whitespace-nowrap text-black  pl-3 ">{ch.label}</span>
+              <span className="whitespace-wrap text-sm text-black text-start ">{ch.label}</span>
             </Link>
           ))}
         </div>

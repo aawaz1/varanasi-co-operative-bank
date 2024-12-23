@@ -51,7 +51,7 @@ const Calculator = () => {
        
       ];
   return (
-    <div className='bg-white border-[2px] border-primary group relative   p-3 flex flex-col justify-center gap-6 py-7 rounded-xl px-4 md:px-12 '>
+    <div className='bg-white border-[2px] border-primary group relative   p-3 flex flex-col justify-center gap-6 py-6  rounded-xl px-4 md:px-12 '>
             
 
       <div className='relative'>
